@@ -1,0 +1,20 @@
+package org.example;
+
+public class Clothing extends Product {
+    private String size;
+
+    public Clothing(String name, String id, double price, String size) {
+        super(name, id, price);
+        this.size = size;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    @Override
+    public String toString() {
+        return "Clothing [" + getName() + ", id: " + getId() + ", цена: " + getPrice()
+                + ", размер: " + size + "]";
+    }
+}
