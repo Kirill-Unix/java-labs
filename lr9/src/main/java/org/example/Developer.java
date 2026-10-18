@@ -1,0 +1,30 @@
+package org.example;
+
+public class Developer extends Employee {
+    private String language;
+
+    public Developer(String name, double salary, int experience, String language) {
+        super(name, salary, experience);
+        this.language = language;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    @Override
+    public void work() {
+        System.out.println("Пишет код");
+    }
+
+    @Override
+    public double calculateBonus() {
+        return getSalary() * 0.15;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Developer [имя: " + getName() + ", зарплата: " + getSalary()
+                + ", стаж: " + getExperience() + ", язык: " + language + "]");
+    }
+}
